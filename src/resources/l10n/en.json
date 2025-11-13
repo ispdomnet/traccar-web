@@ -628,12 +628,13 @@
     "maintenanceStart": "Start",
     "maintenancePeriod": "Period",
 	
-    "grossCombVWeight": "Gross Combination Vehicle Weight",
+    "ctGrossCombinationVehicleWeight": "Gross Combination Vehicle Weight",
     "ctVehicleRnp": "Vehicle Registration Number",
     "ctDriver1Name": "Driver 1 Name",
     "ctDriver1SurName": "Driver 1 SurName",
     "ctDriver2Name": "Driver 2 Name",
     "ctDriver2SurName": "Driver 2 SurName",
 	
-	"sharedKilogramAbbreviation": "kg"
+	"sharedKilogramAbbreviation": "kg",
+	"sharedTonneAbbreviation": "t"
 }

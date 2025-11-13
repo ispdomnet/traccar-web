@@ -79,7 +79,13 @@ export const formatSpeed = (value, unit, t) => `${speedFromKnots(value, unit).to
 
 export const formatVolume = (value, unit, t) => `${volumeFromLiters(value, unit).toFixed(2)} ${volumeUnitString(unit, t)}`;
 
-export const formatWeight = (value, t) => `${value.toFixed(2)} ${t('sharedKilogramAbbreviation')}`;
+export const formatWeight = (value, t) => {
+  if (value == null) return '';
+  if (value >= 1000) {
+    return `${(value / 1000).toFixed(2)} ${t('sharedTonneAbbreviation')}`;
+  }
+  return `${value.toFixed(2)} ${t('sharedKilogramAbbreviation')}`;
+};
 
 export const formatNumericHours = (value, t) => {
   const hours = Math.floor(value / 3600000);
