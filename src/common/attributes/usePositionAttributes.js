@@ -218,7 +218,7 @@ export default (t) => useMemo(() => ({
   fuel: {
     name: t('positionFuel'),
     type: 'number',
-    dataType: 'volume',
+    dataType: 'percentage',
   },
   fuelUsed: {
     name: t('positionFuelUsed'),
@@ -391,6 +391,11 @@ export default (t) => useMemo(() => ({
   },
   
   
+  grossCombVWeight: {
+    name: t('ctGrossCombinationVehicleWeight'),
+    type: 'number',
+    dataType: 'weight',
+  },
   vehicleRnp: {
     name: t('ctVehicleRnp'),
     type: 'string',
@@ -405,10 +410,10 @@ export default (t) => useMemo(() => ({
   },
   io10520: {
     name: t('ctDriver2Name'),
-    type: 'number',
+    type: 'string',
   },
   io10521: {
     name: t('ctDriver2SurName'),
-    type: 'number',
+    type: 'string',
   },
 }), [t]);

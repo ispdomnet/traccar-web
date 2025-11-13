@@ -626,9 +626,12 @@
     "maintenanceStart": "Початок",
     "maintenancePeriod": "Період",
 	
+    "grossCombVWeight": "Повна маса транспортного засобу",
     "ctVehicleRnp": "Реєстраційний номер машини",
     "ctDriver1Name": "Ім'я водія 1",
     "ctDriver1SurName": "Прізвище водія 1",
     "ctDriver2Name": "Ім'я водія 2",
-    "ctDriver2SurName": "Прізвище водія 2"
+    "ctDriver2SurName": "Прізвище водія 2",
+	
+	"sharedKilogramAbbreviation": "кг"
 }
