@@ -81,7 +81,6 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'obdOdometer':
       case 'distance':
       case 'totalDistance':
-	  case 'serviceDistance': //сервісна дистанція
         return value != null ? formatDistance(value, distanceUnit, t) : '';
       case 'hours':
         return value != null ? formatNumericHours(value, t) : '';
