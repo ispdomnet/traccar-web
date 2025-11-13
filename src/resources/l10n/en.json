@@ -46,7 +46,7 @@
     "sharedAttributes": "Attributes",
     "sharedAttribute": "Attribute",
     "sharedDrivers": "Drivers",
-    "sharedDriver": "Driver",
+    "sharedDriver": "Driver ID",
     "sharedArea": "Area",
     "sharedSound": "Notification Sound",
     "sharedType": "Type",
@@ -626,5 +626,10 @@
     "categoryVan": "Van",
     "categoryScooter": "Scooter",
     "maintenanceStart": "Start",
-    "maintenancePeriod": "Period"
+    "maintenancePeriod": "Period",
+	
+    "ctDriver1Name": "Driver 1 Name",
+    "ctDriver1SurName": "Driver 1 SurName",
+    "ctDriver2Name": "Driver 2 Name",
+    "ctDriver2SurName": "Driver 2 SurName"
 }

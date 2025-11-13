@@ -46,7 +46,7 @@
     "sharedAttributes": "Атрибути",
     "sharedAttribute": "Атрибут",
     "sharedDrivers": "Водії",
-    "sharedDriver": "Водій",
+    "sharedDriver": "ID Водія",
     "sharedArea": "Площа",
     "sharedSound": "Звукове повідомлення",
     "sharedType": "Тип",
@@ -624,5 +624,10 @@
     "categoryVan": "Фургон",
     "categoryScooter": "Скутер",
     "maintenanceStart": "Початок",
-    "maintenancePeriod": "Період"
+    "maintenancePeriod": "Період",
+	
+    "ctDriver1Name": "Ім'я водія 1",
+    "ctDriver1SurName": "Прізвище водія 1",
+    "ctDriver2Name": "Ім'я водія 2",
+    "ctDriver2SurName": "Прізвище водія 2"
 }

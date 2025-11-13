@@ -389,4 +389,22 @@ export default (t) => useMemo(() => ({
     name: t('positionAudio'),
     type: 'string',
   },
+  
+  
+  io10518: {
+    name: t('ctDriver1Name'),
+    type: 'string',
+  },
+  io10519: {
+    name: t('ctDriver1SurName'),
+    type: 'string',
+  },
+  io10520: {
+    name: t('ctDriver2Name'),
+    type: 'number',
+  },
+  io10521: {
+    name: t('ctDriver2SurName'),
+    type: 'number',
+  },
 }), [t]);
