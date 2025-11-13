@@ -17,6 +17,7 @@ import {
   formatVoltage,
   formatVolume,
   formatConsumption,
+  formatWeight,
 } from '../util/formatter';
 import { speedToKnots } from '../util/converter';
 import { useAttributePreference, usePreference } from '../util/preferences';

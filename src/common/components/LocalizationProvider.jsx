@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import dayjs from 'dayjs';
 import usePersistedState from '../util/usePersistedState';
 
-import af from '../../resources/l10n/af.json'; import 'dayjs/locale/af';
+/*import af from '../../resources/l10n/af.json'; import 'dayjs/locale/af';
 import ar from '../../resources/l10n/ar.json'; import 'dayjs/locale/ar';
 import az from '../../resources/l10n/az.json'; import 'dayjs/locale/az';
 import bg from '../../resources/l10n/bg.json'; import 'dayjs/locale/bg';
@@ -15,8 +15,8 @@ import cs from '../../resources/l10n/cs.json'; import 'dayjs/locale/cs';
 import da from '../../resources/l10n/da.json'; import 'dayjs/locale/da';
 import de from '../../resources/l10n/de.json'; import 'dayjs/locale/de';
 import el from '../../resources/l10n/el.json'; import 'dayjs/locale/el';
-import en from '../../resources/l10n/en.json'; import 'dayjs/locale/en';
-import es from '../../resources/l10n/es.json'; import 'dayjs/locale/es';
+*/import en from '../../resources/l10n/en.json'; import 'dayjs/locale/en';
+/*import es from '../../resources/l10n/es.json'; import 'dayjs/locale/es';
 import fa from '../../resources/l10n/fa.json'; import 'dayjs/locale/fa';
 import fi from '../../resources/l10n/fi.json'; import 'dayjs/locale/fi';
 import fr from '../../resources/l10n/fr.json'; import 'dayjs/locale/fr';
@@ -57,14 +57,14 @@ import sv from '../../resources/l10n/sv.json'; import 'dayjs/locale/sv';
 import ta from '../../resources/l10n/ta.json'; import 'dayjs/locale/ta';
 import th from '../../resources/l10n/th.json'; import 'dayjs/locale/th';
 import tr from '../../resources/l10n/tr.json'; import 'dayjs/locale/tr';
-import uk from '../../resources/l10n/uk.json'; import 'dayjs/locale/uk';
-import uz from '../../resources/l10n/uz.json'; import 'dayjs/locale/uz';
+*/import uk from '../../resources/l10n/uk.json'; import 'dayjs/locale/uk';
+/*import uz from '../../resources/l10n/uz.json'; import 'dayjs/locale/uz';
 import vi from '../../resources/l10n/vi.json'; import 'dayjs/locale/vi';
 import zh from '../../resources/l10n/zh.json'; import 'dayjs/locale/zh';
 import zh_TW from '../../resources/l10n/zh_TW.json'; import 'dayjs/locale/zh-tw';
-
+*/
 const languages = {
-  af: { data: af, country: 'ZA', name: 'Afrikaans' },
+  /*af: { data: af, country: 'ZA', name: 'Afrikaans' },
   ar: { data: ar, country: 'AE', name: 'العربية' },
   az: { data: az, country: 'AZ', name: 'Azərbaycanca' },
   bg: { data: bg, country: 'BG', name: 'Български' },
@@ -74,8 +74,8 @@ const languages = {
   de: { data: de, country: 'DE', name: 'Deutsch' },
   da: { data: da, country: 'DK', name: 'Dansk' },
   el: { data: el, country: 'GR', name: 'Ελληνικά' },
-  en: { data: en, country: 'US', name: 'English' },
-  es: { data: es, country: 'ES', name: 'Español' },
+  */en: { data: en, country: 'US', name: 'English' },
+  /*es: { data: es, country: 'ES', name: 'Español' },
   fa: { data: fa, country: 'IR', name: 'فارسی' },
   fi: { data: fi, country: 'FI', name: 'Suomi' },
   fr: { data: fr, country: 'FR', name: 'Français' },
@@ -116,12 +116,12 @@ const languages = {
   ta: { data: ta, country: 'IN', name: 'தமிழ்' },
   th: { data: th, country: 'TH', name: 'ไทย' },
   tr: { data: tr, country: 'TR', name: 'Türkçe' },
-  uk: { data: uk, country: 'UA', name: 'Українська' },
-  uz: { data: uz, country: 'UZ', name: 'Oʻzbekcha' },
+  */uk: { data: uk, country: 'UA', name: 'Українська' },
+  /*uz: { data: uz, country: 'UZ', name: 'Oʻzbekcha' },
   vi: { data: vi, country: 'VN', name: 'Tiếng Việt' },
   zh: { data: zh, country: 'CN', name: '中文' },
   zh_TW: { data: zh_TW, country: 'TW', name: '中文 (Taiwan)' },
-};
+*/};
 
 const getDefaultLanguage = () => {
   const browserLanguages = window.navigator.languages ? window.navigator.languages.slice() : [];
