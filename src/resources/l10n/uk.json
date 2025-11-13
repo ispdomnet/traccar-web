@@ -626,6 +626,7 @@
     "maintenanceStart": "Початок",
     "maintenancePeriod": "Період",
 	
+    "ctVehicleRnp": "Реєстраційний номер машини",
     "ctDriver1Name": "Ім'я водія 1",
     "ctDriver1SurName": "Прізвище водія 1",
     "ctDriver2Name": "Ім'я водія 2",

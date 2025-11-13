@@ -391,6 +391,10 @@ export default (t) => useMemo(() => ({
   },
   
   
+  vehicleRnp: {
+    name: t('ctVehicleRnp'),
+    type: 'string',
+  },
   io10518: {
     name: t('ctDriver1Name'),
     type: 'string',
