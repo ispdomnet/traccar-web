@@ -391,10 +391,13 @@ export default (t) => useMemo(() => ({
   },
   
   
+  serviceDistance: {
+    name: t('ctServiceDistance'),
+    type: 'number',
+  },
   grossCombVWeight: {
     name: t('ctGrossCombinationVehicleWeight'),
     type: 'number',
-    dataType: 'weight',
   },
   vehicleRnp: {
     name: t('ctVehicleRnp'),

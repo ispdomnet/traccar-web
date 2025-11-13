@@ -67,6 +67,7 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'batteryLevel':
         return value != null ? formatPercentage(value) : '';
       case 'volume':
+      case 'io86': //топливо
         return value != null ? formatVolume(value, volumeUnit, t) : '';
       case 'fuelConsumption':
         return value != null ? formatConsumption(value, t) : '';
@@ -80,6 +81,7 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'obdOdometer':
       case 'distance':
       case 'totalDistance':
+	  case 'serviceDistance': //сервісна дистанція
         return value != null ? formatDistance(value, distanceUnit, t) : '';
       case 'hours':
         return value != null ? formatNumericHours(value, t) : '';

@@ -628,6 +628,7 @@
     "maintenanceStart": "Start",
     "maintenancePeriod": "Period",
 	
+    "ctServiceDistance": "Service Distance",
     "ctGrossCombinationVehicleWeight": "Gross Combination Vehicle Weight",
     "ctVehicleRnp": "Vehicle Registration Number",
     "ctDriver1Name": "Driver 1 Name",
