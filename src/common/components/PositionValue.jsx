@@ -69,8 +69,6 @@ const PositionValue = ({ position, property, attribute }) => {
         return value != null ? formatVolume(value, volumeUnit, t) : '';
       case 'fuelConsumption':
         return value != null ? formatConsumption(value, t) : '';
-      case 'grossCombVWeight':
-        return value != null ? formatWeight(value, t) : '';
       case 'coolantTemp':
         return value != null ? formatTemperature(value) : '';
       case 'alarm':
@@ -85,6 +83,9 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'hours':
         return value != null ? formatNumericHours(value, t) : '';
       default:
+        if (attribute === 'grossCombVWeight') {
+          return formatWeight(value, t);
+        }
         if (typeof value === 'number') {
           return formatNumber(value);
         } if (typeof value === 'boolean') {
