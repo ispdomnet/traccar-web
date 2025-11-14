@@ -299,7 +299,7 @@
     "positionOdometer": "Odometer",
     "positionServiceOdometer": "Service Odometer",
     "positionTripOdometer": "Trip Odometer",
-    "positionHours": "Hours",
+    "positionHours": "Engine Total Hours Of Operation",
     "positionSteps": "Steps",
     "positionInput": "Input",
     "positionHeartRate": "Heart Rate",
@@ -629,6 +629,9 @@
     "maintenancePeriod": "Period",
 	
 	
+    "ctWheelBasedSpeed": "Wheel Based Speed",
+    "ctFuelLevel": "Fuel Level",
+    "ctAccelerationPedalPosition": "Acceleration Pedal Position",
     "ctGrossCombinationVehicleWeight": "Gross Combination Vehicle Weight",
     "ctVehicleRnp": "Vehicle Registration Number",
     "ctDriver1Name": "Driver 1 Name",

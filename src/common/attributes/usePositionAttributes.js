@@ -391,6 +391,18 @@ export default (t) => useMemo(() => ({
   },
   
  
+  wheelBasedSpeed: {
+    name: t('ctWheelBasedSpeed'),
+    type: 'number',
+  },
+  fuelLevel: {
+    name: t('ctFuelLevel'),
+    type: 'number',
+  },
+  accelerationPedalPosition: {
+    name: t('ctAccelerationPedalPosition'),
+    type: 'number',
+  },
   grossCombVWeight: {
     name: t('ctGrossCombinationVehicleWeight'),
     type: 'number',

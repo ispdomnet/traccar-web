@@ -65,9 +65,10 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'battery':
         return value != null ? formatVoltage(value, t) : '';
       case 'batteryLevel':
+      case 'fuelLevel': //рівень топлива
         return value != null ? formatPercentage(value) : '';
       case 'volume':
-      case 'io86': //топливо
+      case 'fuelUsed': //топливо використане
         return value != null ? formatVolume(value, volumeUnit, t) : '';
       case 'fuelConsumption':
         return value != null ? formatConsumption(value, t) : '';
@@ -75,8 +76,8 @@ const PositionValue = ({ position, property, attribute }) => {
         return value != null ? formatTemperature(value) : '';
       case 'alarm':
         return formatAlarm(value, t);
-      case 'serviceOdometer':
-	    return value != null ? formatDistanceKm(value, distanceUnit, t) : '';
+      case 'serviceOdometer': //відстань до сервісу
+        return value != null ? formatDistance(value, 'km', t) : '';
       case 'odometer':
       case 'tripOdometer':
       case 'obdOdometer':
@@ -86,9 +87,15 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'hours':
         return value != null ? formatNumericHours(value, t) : '';
       default:
-        if (attribute === 'grossCombVWeight') {
+        if (attribute === 'grossCombVWeight') { //вага тз
           return formatWeight(value, t);
         }
+        if (attribute === 'accelerationPedalPosition') { //положення газу, %
+          return formatPercentage(value, t);
+        }
+        //if (attribute === 'wheelBasedSpeed') { //швидкість тз на осснові коліс
+        //  return formatSpeed(value, "kmh");
+        //}
         if (typeof value === 'number') {
           return formatNumber(value);
         } if (typeof value === 'boolean') {

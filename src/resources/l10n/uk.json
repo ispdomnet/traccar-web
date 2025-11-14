@@ -298,7 +298,7 @@
     "positionOdometer": "Одометр",
     "positionServiceOdometer": "Одометр обслуговування",
     "positionTripOdometer": "Одометр поїздки",
-    "positionHours": "Години",
+    "positionHours": "Загальна кількість годин роботи двигуна",
     "positionSteps": "Кроки",
     "positionInput": "Входи",
     "positionHeartRate": "Heart Rate",
@@ -627,6 +627,9 @@
     "maintenancePeriod": "Період",
 	
 	
+    "ctWheelBasedSpeed": "Швидкість на основі коліс",
+    "ctFuelLevel": "Рівень палива",
+    "ctAccelerationPedalPosition": "Положення педалі акселератора",
     "ctGrossCombinationVehicleWeight": "Повна маса транспортного засобу",
     "ctVehicleRnp": "Реєстраційний номер машини",
     "ctDriver1Name": "Ім'я водія 1",
