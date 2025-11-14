@@ -75,8 +75,9 @@ const PositionValue = ({ position, property, attribute }) => {
         return value != null ? formatTemperature(value) : '';
       case 'alarm':
         return formatAlarm(value, t);
-      case 'odometer':
       case 'serviceOdometer':
+	    return value != null ? formatDistanceKm(value, distanceUnit, t) : '';
+      case 'odometer':
       case 'tripOdometer':
       case 'obdOdometer':
       case 'distance':
