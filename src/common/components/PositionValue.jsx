@@ -74,6 +74,7 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'fuelConsumption':
         return value != null ? formatConsumption(value, t) : '';
       case 'coolantTemp':
+      case 'ambientTemp':
         return value != null ? formatTemperature(value) : '';
       case 'alarm':
         return formatAlarm(value, t);
@@ -103,9 +104,9 @@ const PositionValue = ({ position, property, attribute }) => {
         if (attribute === 'wheelBasedSpeed') { //швидкість тз на основі коліс
           return formatSpeed(value, "kmh", t);
         }
-        if (attribute === 'totalOdometer_io') { //один одометр (іо)
-          return formatDistance(value, "m", t);
-        }
+        //if (attribute === 'totalOdometer_io') { //один одометр (іо)
+        //  return formatDistance(value, "m", t);
+        //}
         if (typeof value === 'number') {
           return formatNumber(value);
         } if (typeof value === 'boolean') {

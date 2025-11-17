@@ -391,11 +391,15 @@ export default (t) => useMemo(() => ({
   },
   
  
+  timestamp: {
+    name: t('ctTimestamp'),
+    type: 'string',
+  },
   nextCalD: {
     name: t('ctNextCalD'),
     type: 'string',
   },
-  D1EndLDrr: {
+  d1EndLDrr: {
     name: t('ctD1EndLDrr'),
     type: 'string',
   },
