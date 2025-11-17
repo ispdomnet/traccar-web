@@ -12,6 +12,7 @@ import {
   speedUnitString,
   volumeFromLiters,
   volumeUnitString,
+  formatEpoch,
 } from './converter';
 import { prefixString } from './stringUtils';
 
@@ -85,6 +86,11 @@ export const formatWeight = (value, t) => {
     return `${(value / 1000).toFixed(2)} ${t('sharedTonneAbbreviation')}`;
   }
   return `${value.toFixed(2)} ${t('sharedKilogramAbbreviation')}`;
+};
+
+export const formatEpoch = (date) => {
+  if (!date) return '';
+  return date.toLocaleString();
 };
 
 export const formatNumericHours = (value, t) => {

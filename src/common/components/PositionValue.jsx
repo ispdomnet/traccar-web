@@ -18,6 +18,7 @@ import {
   formatVolume,
   formatConsumption,
   formatWeight,
+  formatEpoch,
 } from '../util/formatter';
 import { speedToKnots } from '../util/converter';
 import { useAttributePreference, usePreference } from '../util/preferences';
@@ -86,6 +87,12 @@ const PositionValue = ({ position, property, attribute }) => {
         return value != null ? formatDistance(value, distanceUnit, t) : '';
       case 'hours':
         return value != null ? formatNumericHours(value, t) : '';
+      case 'd1EndFSlWp':
+      case 'd1EndLWrp':
+      case 'd1EndLDrr':
+      case 'nextCalD':
+      case 'timestamp':
+        return formatEpoch(value);
       default:
         if (attribute === 'grossCombVWeight') { //вага тз
           return formatWeight(value, t);
@@ -93,9 +100,12 @@ const PositionValue = ({ position, property, attribute }) => {
         if (attribute === 'accelerationPedalPosition') { //положення газу, %
           return formatPercentage(value, t);
         }
-        //if (attribute === 'wheelBasedSpeed') { //швидкість тз на осснові коліс
-        //  return formatSpeed(value, "kmh");
-        //}
+        if (attribute === 'wheelBasedSpeed') { //швидкість тз на основі коліс
+          return formatSpeed(value, "kmh", t);
+        }
+        if (attribute === 'totalOdometer_io') { //один одометр (іо)
+          return formatDistance(value, "m", t);
+        }
         if (typeof value === 'number') {
           return formatNumber(value);
         } if (typeof value === 'boolean') {

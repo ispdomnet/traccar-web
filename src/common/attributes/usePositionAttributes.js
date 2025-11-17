@@ -391,6 +391,30 @@ export default (t) => useMemo(() => ({
   },
   
  
+  nextCalD: {
+    name: t('ctNextCalD'),
+    type: 'string',
+  },
+  D1EndLDrr: {
+    name: t('ctD1EndLDrr'),
+    type: 'string',
+  },
+  d1EndLWrp: {
+    name: t('ctD1EndLWrp'),
+    type: 'string',
+  },
+  d1EndFSlWp: {
+    name: t('ctD1EndFSlWp'),
+    type: 'string',
+  },
+  operatorName: {
+    name: t('ctOperatorName'),
+    type: 'string',
+  },
+  totalOdometer_io: {
+    name: t('ctTotalOdometer_io'),
+    type: 'number',
+  },
   wheelBasedSpeed: {
     name: t('ctWheelBasedSpeed'),
     type: 'number',

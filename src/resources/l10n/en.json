@@ -325,7 +325,7 @@
     "positionDeviceTemp": "Device Temperature",
     "positionCoolantTemp": "Coolant Temperature",
     "positionEngineTemp": "Engine Temperature",
-    "positionOperator": "Operator",
+    "positionOperator": "Operator Code",
     "positionCommand": "Command",
     "positionBlocked": "Blocked",
     "positionDtcs": "DTCs",
@@ -628,7 +628,12 @@
     "maintenanceStart": "Start",
     "maintenancePeriod": "Period",
 	
-	
+    "ctNextCalD": "Next Calibration Date",
+    "ctD1EndLDrr": "Driver 1 end of last daily rest report",
+    "ctD1EndLWrp": "Driver 1 end of last weekly rest period",
+    "ctD1EndFSlWp": "Driver 1 end of second last weekly rest period",	
+    "ctOperatorName": "Operator name",
+	"ctTotalOdometer_io": "Ще якийсь один одометр",
     "ctWheelBasedSpeed": "Wheel Based Speed",
     "ctFuelLevel": "Fuel Level",
     "ctAccelerationPedalPosition": "Acceleration Pedal Position",

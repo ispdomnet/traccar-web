@@ -105,3 +105,8 @@ export const volumeUnitString = (unit, t) => {
 export const volumeFromLiters = (value, unit) => value / volumeConverter(unit);
 
 export const volumeToLiters = (value, unit) => value * volumeConverter(unit);
+
+export const epochConv = (value) => {
+  if (!value) return null;
+  return new Date(value * 1000); // epoch seconds → Date object
+};
