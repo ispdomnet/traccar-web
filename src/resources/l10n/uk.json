@@ -627,6 +627,9 @@
     "maintenancePeriod": "Період",
 	
 	
+    "ctLlcFuelTotal": "Сума топлива в баках",
+    "ctLlc1FuelLevel": "Бак 818л",
+    "ctLlc2FuelLevel": "Бак 415л",
     "ctAmbientTemp": "Темпертура навколишнього середовище",
     "ctTimestamp": "Позначка часу",
 	"ctNextCalD": "Час до наступного калібрування тахографа",

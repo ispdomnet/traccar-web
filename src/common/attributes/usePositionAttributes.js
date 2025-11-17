@@ -391,6 +391,18 @@ export default (t) => useMemo(() => ({
   },
   
  
+  llcFuelTotal: {
+    name: t('ctLlcFuelTotal'),
+    type: 'string',
+  },
+  llc1FuelLevel: {
+    name: t('ctLlc1FuelLevel'),
+    type: 'string',
+  },
+  llc2FuelLevel: {
+    name: t('ctLlc2FuelLevel'),
+    type: 'string',
+  },
   ambientTemp: {
     name: t('ctAmbientTemp'),
     type: 'string',

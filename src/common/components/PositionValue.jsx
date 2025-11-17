@@ -57,6 +57,7 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'longitude':
         return formatCoordinate('longitude', value, coordinateFormat);
       case 'speed':
+      case 'wheelBasedSpeed': //швидкість тз на основі коліс
         return value != null ? formatSpeed(value, speedUnit, t) : '';
       case 'obdSpeed':
         return value != null ? formatSpeed(speedToKnots(value, 'kmh'), speedUnit, t) : '';
@@ -69,9 +70,11 @@ const PositionValue = ({ position, property, attribute }) => {
         return value != null ? formatVoltage(value, t) : '';
       case 'batteryLevel':
       case 'fuelLevel': //рівень топлива
+      case 'accelerationPedalPosition': //педаль акслератора
         return value != null ? formatPercentage(value) : '';
       case 'volume':
       case 'fuelUsed': //топливо використане
+      //case 'llcFuelTotal': //сума баків
         return value != null ? formatVolume(value, volumeUnit, t) : '';
       case 'fuelConsumption':
         return value != null ? formatConsumption(value, t) : '';
@@ -82,13 +85,13 @@ const PositionValue = ({ position, property, attribute }) => {
         return formatAlarm(value, t);
       case 'serviceOdometer': //відстань до сервісу
         return value != null ? formatDistance(value, 'km', t) : '';
-      case 'odometer':
-      case 'tripOdometer':
+      //case 'odometer': //перевірити
+      //case 'tripOdometer': //перевірити
       case 'obdOdometer':
       case 'distance':
       case 'totalDistance':
-      case 'totalOdometer_io': //перевірити дубль внизу
-        return value != null ? formatDistance(value, distanceUnit, t) : '';
+      //case 'totalOdometer_io': //перевірити дубль внизу
+      //  return value != null ? formatDistance(value, distanceUnit, t) : '';
       case 'hours':
         return value != null ? formatNumericHours(value, t) : '';
       case 'd1EndFSlWp':
@@ -98,22 +101,12 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'timestamp':
         return formatEpoch(value);
       case 'llc1FuelLevel': //датчик топлива 818л
-	    return formatLlc1Fuel(value, volumeUnit, t);
-      case 'llc1FuelLeve2': //датчик топлива 415Л
-	    return formatLlc2Fuel(value, volumeUnit, t);
+        return formatLlc1Fuel(value, volumeUnit, t);
+      case 'llc2FuelLevel': //датчик топлива 415Л
+        return formatLlc2Fuel(value, volumeUnit, t);
+      case 'grossCombVWeight':
+        return formatWeight(value, t);
       default:
-        if (attribute === 'grossCombVWeight') { //вага тз
-          return formatWeight(value, t);
-        }
-        if (attribute === 'accelerationPedalPosition') { //положення газу, %
-          return formatPercentage(value, t);
-        }
-        if (attribute === 'wheelBasedSpeed') { //швидкість тз на основі коліс
-          return formatSpeed(value, "kmh", t);
-        }
-        //if (attribute === 'totalOdometer_io') { //один одометр (іо)
-        //  return formatDistance(value, "m", t);
-        //}
         if (typeof value === 'number') {
           return formatNumber(value);
         } if (typeof value === 'boolean') {

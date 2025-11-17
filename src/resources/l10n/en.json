@@ -628,6 +628,10 @@
     "maintenanceStart": "Start",
     "maintenancePeriod": "Period",
 	
+	
+	"ctLlcFuelTotal": "Sum Fuel",
+	"ctLlc1FuelLevel": "818L Fuel Tank",
+    "ctLlc2FuelLevel": "415L Fuel Tank",
     "ctAmbientTemp": "Ambient Air Temperature",
 	"ctTimestamp": "Timestamp",
     "ctNextCalD": "Next Calibration Date",
