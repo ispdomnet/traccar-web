@@ -282,7 +282,7 @@
     "positionFuel": "Fuel",
     "positionFuelUsed": "Fuel Used",
     "positionPower": "Power",
-    "positionBattery": "Battery",
+    "positionBattery": "GPS Battery",
     "positionRaw": "Raw",
     "positionIndex": "Index",
     "positionHdop": "HDOP",
@@ -628,6 +628,8 @@
     "maintenanceStart": "Start",
     "maintenancePeriod": "Period",
 	
+    "ctAmbientTemp": "Ambient Air Temperature",
+	"ctTimestamp": "Timestamp",
     "ctNextCalD": "Next Calibration Date",
     "ctD1EndLDrr": "Driver 1 end of last daily rest report",
     "ctD1EndLWrp": "Driver 1 end of last weekly rest period",

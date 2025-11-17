@@ -10,6 +10,30 @@ const speedConverter = (unit) => {
   }
 };
 
+export const convertLlc1Fuel = (raw) => {
+  if (raw == null) return null;
+
+  return (((((( -4.62559077e-20 * raw
+      + 3.09843417e-16) * raw
+      - 5.74615318e-13) * raw
+      - 1.10108860e-09) * raw
+      + 7.18574165e-06) * raw
+      + 1.94144873e-01) * raw
+      + 3.78487085);
+};
+
+export const convertLlc2Fuel = (raw) => {
+  if (raw == null) return null;
+
+  return (((((( -5.33307303e-19 * raw
+      + 6.66892059e-15) * raw
+      - 3.21819335e-11) * raw
+      + 7.39347508e-08) * raw
+      - 7.94421818e-05) * raw
+      + 1.35923062e-01) * raw
+      + 2.95947480);
+};
+
 export const speedUnitString = (unit, t) => {
   switch (unit) {
     case 'kmh':

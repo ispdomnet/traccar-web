@@ -391,6 +391,10 @@ export default (t) => useMemo(() => ({
   },
   
  
+  ambientTemp: {
+    name: t('ctAmbientTemp'),
+    type: 'string',
+  },
   timestamp: {
     name: t('ctTimestamp'),
     type: 'string',

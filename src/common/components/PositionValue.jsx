@@ -19,6 +19,8 @@ import {
   formatConsumption,
   formatWeight,
   formatEpoch,
+  formatLlc1Fuel,
+  formatLlc2Fuel,
 } from '../util/formatter';
 import { speedToKnots } from '../util/converter';
 import { useAttributePreference, usePreference } from '../util/preferences';
@@ -85,6 +87,7 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'obdOdometer':
       case 'distance':
       case 'totalDistance':
+      case 'totalOdometer_io': //перевірити дубль внизу
         return value != null ? formatDistance(value, distanceUnit, t) : '';
       case 'hours':
         return value != null ? formatNumericHours(value, t) : '';
@@ -94,6 +97,10 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'nextCalD':
       case 'timestamp':
         return formatEpoch(value);
+      case 'llc1FuelLevel': //датчик топлива 818л
+	    return formatLlc1Fuel(value, volumeUnit, t);
+      case 'llc1FuelLeve2': //датчик топлива 415Л
+	    return formatLlc2Fuel(value, volumeUnit, t);
       default:
         if (attribute === 'grossCombVWeight') { //вага тз
           return formatWeight(value, t);

@@ -281,7 +281,7 @@
     "positionFuel": "Паливо",
     "positionFuelUsed": "Використано палива",
     "positionPower": "Живлення",
-    "positionBattery": "Батарея",
+    "positionBattery": "Батарейка GPS",
     "positionRaw": "Cирі дані",
     "positionIndex": "Індекс",
     "positionHdop": "HDOP",
@@ -627,10 +627,9 @@
     "maintenancePeriod": "Період",
 	
 	
+    "ctAmbientTemp": "Темпертура навколишнього середовище",
     "ctTimestamp": "Позначка часу",
-	
-	
-    "ctNextCalD": "Час до наступного калібрування тахографа",
+	"ctNextCalD": "Час до наступного калібрування тахографа",
     "ctD1EndLDrr": "Звіт про закінчення останнього щоденного відпочинку водія 1",
     "ctD1EndLWrp": "Кінець останнього щотижневого періоду відпочинку водія 1",
     "ctD1EndFSlWp": "Кінець передостаннього щотижневого періоду відпочинку водія 1",

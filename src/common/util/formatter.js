@@ -12,6 +12,8 @@ import {
   speedUnitString,
   volumeFromLiters,
   volumeUnitString,
+  convertLlc1Fuel,
+  convertLlc2Fuel 
 } from './converter';
 import { prefixString } from './stringUtils';
 
@@ -90,6 +92,15 @@ export const formatWeight = (value, t) => {
 export const formatEpoch = (timestamp) => {
   if (!timestamp) return '';
   return new Date(timestamp * 1000).toLocaleString();
+};
+export const formatLlc1Fuel = (raw, volumeUnit, t) => {
+  const liters = convertLlc1Fuel(raw);
+  return liters != null ? formatVolume(liters, volumeUnit, t) : '';
+};
+
+export const formatLlc2Fuel = (raw, volumeUnit, t) => {
+  const liters = convertLlc2Fuel(raw);
+  return liters != null ? formatVolume(liters, volumeUnit, t) : '';
 };
 
 export const formatNumericHours = (value, t) => {
