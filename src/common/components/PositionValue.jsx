@@ -21,6 +21,7 @@ import {
   formatEpoch,
   formatLlc1Fuel,
   formatLlc2Fuel,
+  formatLlcFuelTotal,
 } from '../util/formatter';
 import { speedToKnots } from '../util/converter';
 import { useAttributePreference, usePreference } from '../util/preferences';
@@ -57,7 +58,7 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'longitude':
         return formatCoordinate('longitude', value, coordinateFormat);
       case 'speed':
-      case 'wheelBasedSpeed': //швидкість тз на основі коліс
+      //case 'wheelBasedSpeed': //швидкість тз на основі коліс
         return value != null ? formatSpeed(value, speedUnit, t) : '';
       case 'obdSpeed':
         return value != null ? formatSpeed(speedToKnots(value, 'kmh'), speedUnit, t) : '';
@@ -72,9 +73,15 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'fuelLevel': //рівень топлива
       case 'accelerationPedalPosition': //педаль акслератора
         return value != null ? formatPercentage(value) : '';
+      case 'llcFuelTotal':
+        return formatLlcFuelTotal(
+        position.attributes.llc1FuelLevel,
+        position.attributes.llc2FuelLevel,
+        volumeUnit,
+        t
+      );
       case 'volume':
       case 'fuelUsed': //топливо використане
-      //case 'llcFuelTotal': //сума баків
         return value != null ? formatVolume(value, volumeUnit, t) : '';
       case 'fuelConsumption':
         return value != null ? formatConsumption(value, t) : '';
@@ -90,8 +97,7 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'obdOdometer':
       case 'distance':
       case 'totalDistance':
-      //case 'llcFuelTotal': //перевірити дубль внизу
-      //  return value != null ? formatDistance(value, distanceUnit, t) : '';
+        return value != null ? formatDistance(value, distanceUnit, t) : '';
       case 'hours':
         return value != null ? formatNumericHours(value, t) : '';
       case 'd1EndFSlWp':

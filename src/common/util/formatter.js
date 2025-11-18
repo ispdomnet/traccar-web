@@ -97,10 +97,17 @@ export const formatLlc1Fuel = (raw, volumeUnit, t) => {
   const liters = convertLlc1Fuel(raw);
   return liters != null ? formatVolume(liters, volumeUnit, t) : '';
 };
-
 export const formatLlc2Fuel = (raw, volumeUnit, t) => {
   const liters = convertLlc2Fuel(raw);
   return liters != null ? formatVolume(liters, volumeUnit, t) : '';
+};
+export const formatLlcFuelTotal = (raw1, raw2, volumeUnit, t) => {
+  const v1 = Number(raw1);
+  const v2 = Number(raw2);
+  if (isNaN(v1) || isNaN(v2)) return '';
+
+  const total = convertLlc1Fuel(v1) + convertLlc2Fuel(v2);
+  return formatVolume(total, volumeUnit, t);
 };
 
 export const formatNumericHours = (value, t) => {
