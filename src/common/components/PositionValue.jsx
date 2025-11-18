@@ -90,7 +90,7 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'obdOdometer':
       case 'distance':
       case 'totalDistance':
-      //case 'totalOdometer_io': //перевірити дубль внизу
+      //case 'llcFuelTotal': //перевірити дубль внизу
       //  return value != null ? formatDistance(value, distanceUnit, t) : '';
       case 'hours':
         return value != null ? formatNumericHours(value, t) : '';
