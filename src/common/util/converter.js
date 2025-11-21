@@ -33,22 +33,19 @@ export const convertLlc2Fuel = (raw) => {
       + 1.35923062e-01) * raw
       + 2.95947480);
 };
-export const hexLongToAscii = (value) => {
-  if (value == null) return '';
+export const hexLongToAscii = (hex) => {
+  if (!hex || typeof hex !== 'string') return '';
+
+  hex = hex.replace(/^0x/i, '').replace(/[^0-9a-f]/gi, '');
 
   try {
-    let hex = Number(value).toString(16);
-    if (hex.length % 2 !== 0) {
-      hex = '0' + hex;
-    }
-    let ascii = '';
-    for (let i = 0; i < hex.length; i += 2) {
-      const byte = parseInt(hex.slice(i, i + 2), 16);
-      ascii += String.fromCharCode(byte);
-    }
-    return ascii.trim();
+    const bytes = hex.match(/.{1,2}/g).map(b => parseInt(b, 16));
+    const len = bytes[0];
+    const asciiBytes = bytes.slice(1, 1 + len);
+
+    return String.fromCharCode(...asciiBytes).trim();
   } catch (e) {
-    return String(value);
+    return hex;
   }
 };
 export const speedUnitString = (unit, t) => {
