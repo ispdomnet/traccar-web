@@ -455,19 +455,19 @@ export default (t) => useMemo(() => ({
     name: t('ctVehicleRnp'),
     type: 'string',
   },
-  io10518: {
+  d1Name: {
     name: t('ctDriver1Name'),
     type: 'string',
   },
-  io10519: {
+  d1SName: {
     name: t('ctDriver1SurName'),
     type: 'string',
   },
-  io10520: {
+  d2Name: {
     name: t('ctDriver2Name'),
     type: 'string',
   },
-  io10521: {
+  d2SName: {
     name: t('ctDriver2SurName'),
     type: 'string',
   },

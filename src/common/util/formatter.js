@@ -13,7 +13,8 @@ import {
   volumeFromLiters,
   volumeUnitString,
   convertLlc1Fuel,
-  convertLlc2Fuel 
+  convertLlc2Fuel,
+  hexLongToAscii,
 } from './converter';
 import { prefixString } from './stringUtils';
 
@@ -109,6 +110,7 @@ export const formatLlcFuelTotal = (raw1, raw2, volumeUnit, t) => {
   const total = convertLlc1Fuel(v1) + convertLlc2Fuel(v2);
   return formatVolume(total, volumeUnit, t);
 };
+export const formatDriver = (value) => hexLongToAscii(value);
 
 export const formatNumericHours = (value, t) => {
   const hours = Math.floor(value / 3600000);

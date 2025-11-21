@@ -83,8 +83,8 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'volume':
       case 'fuelUsed': //топливо використане
         return value != null ? formatVolume(value, volumeUnit, t) : '';
-      case 'fuelConsumption':
-        return value != null ? formatConsumption(value, t) : '';
+      //case 'fuelConsumption':
+      //  return value != null ? formatConsumption(value, t) : '';
       case 'coolantTemp':
       case 'ambientTemp':
         return value != null ? formatTemperature(value) : '';
@@ -110,8 +110,13 @@ const PositionValue = ({ position, property, attribute }) => {
         return formatLlc1Fuel(value, volumeUnit, t);
       case 'llc2FuelLevel': //датчик топлива 415Л
         return formatLlc2Fuel(value, volumeUnit, t);
-      case 'grossCombVWeight':
+      case 'grossCombVWeight': //вага тз
         return formatWeight(value, t);
+      case 'd1Name':
+      case 'd1SName':
+      case 'd2Name':
+      case 'd2SName':
+        return formatDriver(value);
       default:
         if (typeof value === 'number') {
           return formatNumber(value);
