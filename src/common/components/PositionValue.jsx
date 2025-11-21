@@ -22,6 +22,7 @@ import {
   formatLlc1Fuel,
   formatLlc2Fuel,
   formatLlcFuelTotal,
+  formatMinutes,
 } from '../util/formatter';
 import { speedToKnots } from '../util/converter';
 import { useAttributePreference, usePreference } from '../util/preferences';
@@ -117,6 +118,23 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'd2Name':
       case 'd2SName':
         return formatDriver(value);
+	  case 'd1DoNDP':
+	  case 'd1RTUNBR':
+	  case 'd1DoNB':
+	  case 'd1CDT':
+	  case 'd1CBT':
+	  case 'd1SAD':
+	  case 'd1CT':
+	  case 'd1RWB':
+	  case 'd1RCW':
+	  case 'd1RTNP':
+	  case 'd1RNDP':
+	  case 'd1RDTC':
+	  case 'd1ONDW':
+	  case 'd1OND2W':
+	  case 'd1RTOBR':
+	  case 'd1TLNDP':
+	    return formatMinutes(value);
       default:
         if (typeof value === 'number') {
           return formatNumber(value);

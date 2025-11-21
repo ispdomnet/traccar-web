@@ -390,7 +390,102 @@ export default (t) => useMemo(() => ({
     type: 'string',
   },
   
- 
+  d1CDT: {
+    name: t('ctD1CDT'),
+    type: 'string',
+  },
+  d2CDT: {
+    name: t('ctD2CDT'),
+    type: 'string',
+  },
+  d1CBT: {
+    name: t('ctD1CBT'),
+    type: 'string',
+  },
+  d2CBT: {
+    name: t('ctD2CBT'),
+    type: 'string',
+  },
+  d1SAD: {
+    name: t('ctD1SAD'),
+    type: 'string',
+  },
+  d2SAD: {
+    name: t('ctD2SAD'),
+    type: 'string',
+  },
+  d1CumDT: {
+    name: t('ctD1CumDT'),
+    type: 'string',
+  },
+  d1DDT: {
+    name: t('ctD1DDT'),
+    type: 'string',
+  },
+  d1WDT: {
+    name: t('ctD1WDT'),
+    type: 'string',
+  },
+  d1TLDRP: {
+    name: t('ctD1TLDRP'),
+    type: 'string',
+  },
+  d1TLWRP: {
+    name: t('ctD1TLWRP'),
+    type: 'string',
+  },
+  d1MinDR: {
+    name: t('ctD1MinDR'),
+    type: 'string',
+  },
+  d1MinWR: {
+    name: t('ctD1MinWR'),
+    type: 'string',
+  },
+  d1DoNBR: {
+    name: t('ctD1DoNBR'),
+    type: 'string',
+  },
+  d1RTUNBR: {
+    name: t('ctD1RTUNBR'),
+    type: 'string',
+  },
+  d1RCDT: {
+    name: t('ctD1RCDT'),
+    type: 'string',
+  },
+  d1RDTS: {
+    name: t('ctD1RDTS'),
+    type: 'string',
+  },
+  d1RDTW: {
+    name: t('ctD1RDTW'),
+    type: 'string',
+  },
+  d1OC1W: {
+    name: t('ctD1OC1W'),
+    type: 'string',
+  },
+  d1OC2W: {
+    name: t('ctD1OC2W'),
+    type: 'string',
+  },
+  d1OC3W: {
+    name: t('ctD1OC3W'),
+    type: 'string',
+  },
+  d1RTCBR: {
+    name: t('ctD1RTCBR'),
+    type: 'string',
+  },
+  d1TLNDP: {
+    name: t('ctD1TLNDP'),
+    type: 'string',
+  },
+  d1DoNDP: {
+    name: t('ctD1DoNDP'),
+    type: 'string',
+  },
   llcFuelTotal: {
     name: t('ctLlcFuelTotal'),
     type: 'string',

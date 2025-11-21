@@ -53,6 +53,14 @@ export const formatTime = (value, format) => {
   }
   return '';
 };
+export const formatMinutes = (value) => {
+  if (!value && value !== 0) return '';
+
+  const hours = Math.floor(value / 60);
+  const minutes = value % 60;
+
+  return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+};
 
 export const formatStatus = (value, t) => t(prefixString('deviceStatus', value));
 
