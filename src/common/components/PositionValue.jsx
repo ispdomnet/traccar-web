@@ -83,8 +83,8 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'volume':
       case 'fuelUsed': //топливо використане
         return value != null ? formatVolume(value, volumeUnit, t) : '';
-      //case 'fuelConsumption':
-      //  return value != null ? formatConsumption(value, t) : '';
+      case 'fuelConsumption':
+        return value != null ? formatConsumption(value, t) : '';
       case 'coolantTemp':
       case 'ambientTemp':
         return value != null ? formatTemperature(value) : '';
