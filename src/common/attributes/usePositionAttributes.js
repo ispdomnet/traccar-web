@@ -390,117 +390,125 @@ export default (t) => useMemo(() => ({
     type: 'string',
   },
   
+  adBL: {
+    name: t('ctAdBL'),
+    type: 'number',
+  },
+  tahoSpeed: {
+    name: t('ctTahoSpeed'),
+    type: 'number',
+  },
   d1CDT: {
     name: t('ctD1CDT'),
-    type: 'string',
+    type: 'number',
   },
   d2CDT: {
     name: t('ctD2CDT'),
-    type: 'string',
+    type: 'number',
   },
   d1CBT: {
     name: t('ctD1CBT'),
-    type: 'string',
+    type: 'number',
   },
   d2CBT: {
     name: t('ctD2CBT'),
-    type: 'string',
+    type: 'number',
   },
   d1SAD: {
     name: t('ctD1SAD'),
-    type: 'string',
+    type: 'number',
   },
   d2SAD: {
     name: t('ctD2SAD'),
-    type: 'string',
+    type: 'number',
   },
-  d1CumDT: {
-    name: t('ctD1CumDT'),
-    type: 'string',
+  d1CmDT: {
+    name: t('ctD1CmDT'),
+    type: 'number',
   },
   d1DDT: {
     name: t('ctD1DDT'),
-    type: 'string',
+    type: 'number',
   },
   d1WDT: {
     name: t('ctD1WDT'),
-    type: 'string',
+    type: 'number',
   },
   d1TLDRP: {
     name: t('ctD1TLDRP'),
-    type: 'string',
+    type: 'number',
   },
   d1TLWRP: {
     name: t('ctD1TLWRP'),
-    type: 'string',
+    type: 'number',
   },
   d1MinDR: {
     name: t('ctD1MinDR'),
-    type: 'string',
+    type: 'number',
   },
   d1MinWR: {
     name: t('ctD1MinWR'),
-    type: 'string',
+    type: 'number',
   },
   d1DoNBR: {
     name: t('ctD1DoNBR'),
-    type: 'string',
+    type: 'number',
   },
   d1RTUNBR: {
     name: t('ctD1RTUNBR'),
-    type: 'string',
+    type: 'number',
   },
   d1RCDT: {
     name: t('ctD1RCDT'),
-    type: 'string',
+    type: 'number',
   },
   d1RDTS: {
     name: t('ctD1RDTS'),
-    type: 'string',
+    type: 'number',
   },
   d1RDTW: {
     name: t('ctD1RDTW'),
-    type: 'string',
+    type: 'number',
   },
   d1OC1W: {
     name: t('ctD1OC1W'),
-    type: 'string',
+    type: 'number',
   },
   d1OC2W: {
     name: t('ctD1OC2W'),
-    type: 'string',
+    type: 'number',
   },
   d1OC3W: {
     name: t('ctD1OC3W'),
-    type: 'string',
+    type: 'number',
   },
   d1RTCBR: {
     name: t('ctD1RTCBR'),
-    type: 'string',
+    type: 'number',
   },
   d1TLNDP: {
     name: t('ctD1TLNDP'),
-    type: 'string',
+    type: 'number',
   },
   d1DoNDP: {
     name: t('ctD1DoNDP'),
-    type: 'string',
+    type: 'number',
   },
   llcFuelTotal: {
     name: t('ctLlcFuelTotal'),
-    type: 'string',
+    type: 'number',
   },
   llc1FuelLevel: {
     name: t('ctLlc1FuelLevel'),
-    type: 'string',
+    type: 'number',
   },
   llc2FuelLevel: {
     name: t('ctLlc2FuelLevel'),
-    type: 'string',
+    type: 'number',
   },
   ambientTemp: {
     name: t('ctAmbientTemp'),
-    type: 'string',
+    type: 'number',
   },
   timestamp: {
     name: t('ctTimestamp'),

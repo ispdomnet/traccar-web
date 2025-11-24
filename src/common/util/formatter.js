@@ -53,13 +53,64 @@ export const formatTime = (value, format) => {
   }
   return '';
 };
-export const formatMinutes = (value) => {
-  if (!value && value !== 0) return '';
+export function formatTachoMinutes(value) {
+  if (value === null || value === undefined) return '';
+  const v = parseInt(value, 10);
+  if (v === 65535) return '';
+  if (isNaN(v)) return '';
 
-  const hours = Math.floor(value / 60);
-  const minutes = value % 60;
+  const hours = Math.floor(v / 60);
+  const mins = v % 60;
+  return `${hours}:${mins.toString().padStart(2, '0')}`;
+}
 
-  return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+export function formatIo10538(value, t) {
+  if (value === 65535 || value === 0xffff) {
+    return t('io10538.unavailable');
+  }
+
+  const r10h = value & 0b00000111;
+  const rrdr = (value >> 3) & 0b00000111;
+  const unknown = (value >> 6) & 0b00000011;
+  const card = (value >> 8) & 0b00000011;
+  const weeklyCalc = (value >> 10) & 0b00000011;
+  const multi = (value >> 12) & 0b00000011;
+  const overlap = (value >> 14) & 0b00000011;
+
+  return `
+${t('io10538.title')}:
+• ${t('io10538.r10h')}: ${r10h}
+• ${t('io10538.rrdr')}: ${rrdr}
+• ${t('io10538.unknown')}: ${
+      unknown === 0 ? t('io10538.no') : t('io10538.yes')
+    }
+• ${t('io10538.card')}: ${
+      card === 0 ? t('io10538.ok') : t('io10538.notEnough')
+    }
+• ${t('io10538.weeklyCalc')}: ${
+      weeklyCalc === 0 ? t('io10538.disabled') : t('io10538.enabled')
+    }
+• ${t('io10538.multi')}: ${
+      multi === 0 ? t('io10538.singleDriver') : t('io10538.multiDriver')
+    }
+• ${t('io10538.overlap')}: ${
+      overlap === 0 ? t('io10538.no') : t('io10538.yes')
+    }
+  `.trim();
+}
+export const formatAdBLstat = (value, t) => {
+  switch (value) {
+    case 0:
+      return t('adBLstat.off');
+    case 1:
+      return t('adBLstat.condRed');
+    case 2:
+      return t('adBLstat.condYellow');
+    case 3:
+      return t('adBLstat.condInfo');
+    default:
+      return value;
+  }
 };
 
 export const formatStatus = (value, t) => t(prefixString('deviceStatus', value));

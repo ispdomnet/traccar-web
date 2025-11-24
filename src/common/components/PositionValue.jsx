@@ -22,7 +22,9 @@ import {
   formatLlc1Fuel,
   formatLlc2Fuel,
   formatLlcFuelTotal,
-  formatMinutes,
+  formatTachoMinutes,
+  formatIo10538,
+  formatAdBLstat,
 } from '../util/formatter';
 import { speedToKnots } from '../util/converter';
 import { useAttributePreference, usePreference } from '../util/preferences';
@@ -62,6 +64,7 @@ const PositionValue = ({ position, property, attribute }) => {
       //case 'wheelBasedSpeed': //швидкість тз на основі коліс
         return value != null ? formatSpeed(value, speedUnit, t) : '';
       case 'obdSpeed':
+      case 'tahoSpeed':
         return value != null ? formatSpeed(speedToKnots(value, 'kmh'), speedUnit, t) : '';
       case 'course':
         return formatCourse(value);
@@ -73,6 +76,7 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'batteryLevel':
       case 'fuelLevel': //рівень топлива
       case 'accelerationPedalPosition': //педаль акслератора
+      case 'adBL': //рівень адблю
         return value != null ? formatPercentage(value) : '';
       case 'llcFuelTotal':
         return formatLlcFuelTotal(
@@ -118,23 +122,36 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'd2Name':
       case 'd2SName':
         return formatDriver(value);
-	  case 'd1DoNDP':
-	  case 'd1RTUNBR':
-	  case 'd1DoNB':
 	  case 'd1CDT':
-	  case 'd1CBT':
+  	  case 'd2CDT':
+  	  case 'd1CBT':
+	  case 'd2CBT':
 	  case 'd1SAD':
-	  case 'd1CT':
-	  case 'd1RWB':
-	  case 'd1RCW':
-	  case 'd1RTNP':
-	  case 'd1RNDP':
-	  case 'd1RDTC':
-	  case 'd1ONDW':
-	  case 'd1OND2W':
-	  case 'd1RTOBR':
+	  case 'd2SAD':
+	  case 'd1CumDT':
+	  case 'd1DDT':
+	  case 'd1WDT':
+	  case 'd1TLDRP':
+	  case 'd1TLWRP':
+	  case 'd1MinDR':
+	  case 'd1MinWR':
+	  case 'd1DoNBR':
+	  case 'd1RTUNBR':
+	  case 'd1RCDT':
+	  case 'd1RDTS':
+	  case 'd1RDTW':
+	  case 'd1OC1W':
+	  case 'd1OC2W':
+	  case 'd1OC3W':
+	  case 'd1RTCBR':
 	  case 'd1TLNDP':
-	    return formatMinutes(value);
+	  case 'd1DoNDP':
+	    return formatTachoMinutes(value);
+      case 'io10538':
+        return formatIo10538(value, t);
+	  case 'adBLstat':
+	    return formatAdBLstat(value, t);
+
       default:
         if (typeof value === 'number') {
           return formatNumber(value);
