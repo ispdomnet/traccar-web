@@ -147,7 +147,7 @@ const PositionValue = ({ position, property, attribute }) => {
 	  case 'd1TLNDP':
 	  case 'd1DoNDP':
 	    return formatTachoMinutes(value);
-      case 'io10538':
+      case 'd1Ainfo':
         return formatIo10538(value, t);
 	  case 'adBLstat':
 	    return formatAdBLstat(value, t);
