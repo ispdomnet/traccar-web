@@ -628,6 +628,7 @@
     "maintenanceStart": "Start",
     "maintenancePeriod": "Period",
 	
+	
 	"adBLstat": {
 	  "title": "AdBlue status",
 	  "off": "Off",
@@ -637,7 +638,6 @@
 	},
 	"ctAdBL": "AdBlue level",
 	"ctTahoSpeed": "Speed (Taho)",
-	"io10538": "Driver 1 Additional Information",
 	"io10538": {
 		"title": "Period status information",
 		"unavailable": "Data unavailable",

@@ -626,6 +626,7 @@
     "maintenanceStart": "Початок",
     "maintenancePeriod": "Період",
 	
+	
 	"adBLstat": {
 	  "title": "Статус AdBlue",
 	  "off": "Вимкнено",
@@ -635,7 +636,6 @@
 	},
 	"ctAdBL": "Рівень AdBlue",
 	"ctTahoSpeed": "Швидкість (Тахо)",
-	"io10538": "Додаткова інформація водія 1",
 	"io10538": {
 	  "title": "Інформація про статуси періодів",
 	  "unavailable": "Дані недоступні",

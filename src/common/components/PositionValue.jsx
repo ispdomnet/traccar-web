@@ -128,7 +128,7 @@ const PositionValue = ({ position, property, attribute }) => {
 	  case 'd2CBT':
 	  case 'd1SAD':
 	  case 'd2SAD':
-	  case 'd1CumDT':
+	  case 'd1CmDT':
 	  case 'd1DDT':
 	  case 'd1WDT':
 	  case 'd1TLDRP':
