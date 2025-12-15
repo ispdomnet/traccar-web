@@ -66,7 +66,7 @@ export function formatTachoMinutes(value) {
 
 export function formatIo10538(value, t) {
   if (value === 65535 || value === 0xffff) {
-    return t('io10538.unavailable');
+    return t('io10538Unavailable');
   }
 
   const r10h = value & 0b00000111;
@@ -78,36 +78,35 @@ export function formatIo10538(value, t) {
   const overlap = (value >> 14) & 0b00000011;
 
   return `
-${t('io10538.title')}:
-• ${t('io10538.r10h')}: ${r10h}
-• ${t('io10538.rrdr')}: ${rrdr}
-• ${t('io10538.unknown')}: ${
-      unknown === 0 ? t('io10538.no') : t('io10538.yes')
+${t('io10538R10h')}: ${r10h}
+• ${t('io10538Rrdr')}: ${rrdr}
+• ${t('io10538Unknown')}: ${
+      unknown === 0 ? t('io10538No') : t('io10538Yes')
     }
-• ${t('io10538.card')}: ${
-      card === 0 ? t('io10538.ok') : t('io10538.notEnough')
+• ${t('io10538Card')}: ${
+      card === 0 ? t('io10538Ok') : t('io10538NotEnough')
     }
-• ${t('io10538.weeklyCalc')}: ${
-      weeklyCalc === 0 ? t('io10538.disabled') : t('io10538.enabled')
+• ${t('io10538WeeklyCalc')}: ${
+      weeklyCalc === 0 ? t('io10538Disabled') : t('io10538Enabled')
     }
-• ${t('io10538.multi')}: ${
-      multi === 0 ? t('io10538.singleDriver') : t('io10538.multiDriver')
+• ${t('io10538Multi')}: ${
+      multi === 0 ? t('io10538SingleDriver') : t('io10538MultiDriver')
     }
-• ${t('io10538.overlap')}: ${
-      overlap === 0 ? t('io10538.no') : t('io10538.yes')
+• ${t('io10538Overlap')}: ${
+      overlap === 0 ? t('io10538No') : t('io10538Yes')
     }
   `.trim();
 }
 export const formatAdBLstat = (value, t) => {
   switch (value) {
     case 0:
-      return t('adBLstat.off');
+      return t('adBLstatOff');
     case 1:
-      return t('adBLstat.condRed');
+      return t('adBLstatCondRed');
     case 2:
-      return t('adBLstat.condYellow');
+      return t('adBLstatCondYellow');
     case 3:
-      return t('adBLstat.condInfo');
+      return t('adBLstatCondInfo');
     default:
       return value;
   }
