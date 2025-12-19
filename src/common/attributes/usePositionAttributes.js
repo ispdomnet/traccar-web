@@ -390,12 +390,9 @@ export default (t) => useMemo(() => ({
     type: 'string',
   },
   
+  
   d1Ainfo: {
     name: t('ctD1Ainfo'),
-    type: 'string',
-  },
-  AdBLstat: {
-    name: t('ctAdBLstat'),
     type: 'string',
   },
   adBL: {

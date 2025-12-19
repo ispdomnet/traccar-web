@@ -627,11 +627,7 @@
     "maintenancePeriod": "Період",
 	
 	
-	"ctAdBLstat": "Статус AdBlue",
-	"adBLstatOff": "Вимкнено",
-	"adBLstatCondRed": "Червоне попередження",
-	"adBLstatCondYellow": "Жовте попередження",
-	"adBLstatCondInfo": "Інформаційний стан",
+
 	"ctAdBL": "Рівень AdBlue",
 	"ctTahoSpeed": "Швидкість (Тахо)",
 	"ctD1Ainfo": "Інформація про статуси періодів",

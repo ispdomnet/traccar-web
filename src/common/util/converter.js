@@ -33,21 +33,46 @@ export const convertLlc2Fuel = (raw) => {
       + 1.35923062e-01) * raw
       + 2.95947480);
 };
-export const hexLongToAscii = (hex) => {
+export const hexFixedAscii = (hex) => {
   if (!hex || typeof hex !== 'string') return '';
 
   hex = hex.replace(/^0x/i, '').replace(/[^0-9a-f]/gi, '');
+  if (hex.length < 2) return '';
 
-  try {
-    const bytes = hex.match(/.{1,2}/g).map(b => parseInt(b, 16));
-    const len = bytes[0];
-    const asciiBytes = bytes.slice(1, 1 + len);
+  let out = '';
 
-    return String.fromCharCode(...asciiBytes).trim();
-  } catch (e) {
-    return hex;
+  for (let i = 0; i < hex.length; i += 2) {
+    const byte = parseInt(hex.substr(i, 2), 16);
+    if (byte === 0x00) break;
+    if (byte >= 32 && byte <= 126) {
+      out += String.fromCharCode(byte);
+    }
   }
+
+  return out.trim();
 };
+
+export const binaryStringToAscii = (value) => {
+  if (!value) return '';
+
+  if (typeof value === 'string') {
+    let out = '';
+    for (let i = 0; i < value.length; i++) {
+      const code = value.charCodeAt(i);
+      if (code === 0) break;
+      if (code >= 32 && code <= 126) {
+        out += String.fromCharCode(code);
+      }
+    }
+    return out.trim();
+  }
+
+  return String(value);
+};
+
+
+
+
 export const speedUnitString = (unit, t) => {
   switch (unit) {
     case 'kmh':

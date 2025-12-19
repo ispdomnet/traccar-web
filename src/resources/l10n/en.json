@@ -629,12 +629,9 @@
     "maintenancePeriod": "Period",
 	
 	
-	"ctAdBLstat": "AdBlue status",
-	"adBLstatOff": "Off",
-	"adBLstatCondRed": "Condition Red",
-	"adBLstatCondYellow": "Condition Yellow",
-	"adBLstatCondInfo": "Condition Info",
-	"ctAdBL": "AdBlue level",
+
+
+	"ctAdBL": "AdBlue Level",
 	"ctTahoSpeed": "Speed (Taho)",
 	"ctD1Ainfo": "Period status information",
 	"io10538Title": "Period status information",

@@ -14,7 +14,8 @@ import {
   volumeUnitString,
   convertLlc1Fuel,
   convertLlc2Fuel,
-  hexLongToAscii,
+  hexFixedAscii,
+  binaryStringToAscii,
 } from './converter';
 import { prefixString } from './stringUtils';
 
@@ -97,20 +98,6 @@ ${t('io10538R10h')}: ${r10h}
     }
   `.trim();
 }
-export const formatAdBLstat = (value, t) => {
-  switch (value) {
-    case 0:
-      return t('adBLstatOff');
-    case 1:
-      return t('adBLstatCondRed');
-    case 2:
-      return t('adBLstatCondYellow');
-    case 3:
-      return t('adBLstatCondInfo');
-    default:
-      return value;
-  }
-};
 
 export const formatStatus = (value, t) => t(prefixString('deviceStatus', value));
 
@@ -168,7 +155,8 @@ export const formatLlcFuelTotal = (raw1, raw2, volumeUnit, t) => {
   const total = convertLlc1Fuel(v1) + convertLlc2Fuel(v2);
   return formatVolume(total, volumeUnit, t);
 };
-export const formatDriver = (value) => hexLongToAscii(value);
+export const formatAsciiHex = (value) => hexFixedAscii(value);
+export const formatBinaryAscii = (value) => binaryStringToAscii(value);
 
 export const formatNumericHours = (value, t) => {
   const hours = Math.floor(value / 3600000);

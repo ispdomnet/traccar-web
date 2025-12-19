@@ -24,7 +24,8 @@ import {
   formatLlcFuelTotal,
   formatTachoMinutes,
   formatIo10538,
-  formatAdBLstat,
+  formatBinaryAscii,
+  formatAsciiHex,
 } from '../util/formatter';
 import { speedToKnots } from '../util/converter';
 import { useAttributePreference, usePreference } from '../util/preferences';
@@ -121,7 +122,12 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'd1SName':
       case 'd2Name':
       case 'd2SName':
-        return formatDriver(value);
+        return formatAsciiHex(value);
+	  case 'driverUniqueId':
+	  case 'driverUniqueId2':
+      case 'vin':
+      case 'vehicleRnp':
+		return formatBinaryAscii(value);
 	  case 'd1CDT':
   	  case 'd2CDT':
   	  case 'd1CBT':
@@ -188,8 +194,6 @@ const PositionValue = ({ position, property, attribute }) => {
       return <Link component={RouterLink} underline="none" to={`/network/${position.id}`}>{t('sharedInfoTitle')}</Link>;
     case 'geofenceIds':
       return <GeofencesValue geofenceIds={value} />;
-    case 'driverUniqueId':
-      return <DriverValue driverUniqueId={value} />;
     default:
       return formatValue(value);
   }
