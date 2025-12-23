@@ -24,8 +24,16 @@ import {
   formatLlcFuelTotal,
   formatTachoMinutes,
   formatIo10538,
-  formatBinaryAscii,
   formatAsciiHex,
+  formatTachoPerformance,
+  formatDiagnosticsSupported,
+  formatCruiseControl,
+  formatSleepMode,
+  formatDriverWorkState,
+  formatDriverCardPresence,
+  formatDriverTimeState,
+  formatDataMode,
+  formatTachoDataSource,
 } from '../util/formatter';
 import { speedToKnots } from '../util/converter';
 import { useAttributePreference, usePreference } from '../util/preferences';
@@ -52,6 +60,7 @@ const PositionValue = ({ position, property, attribute }) => {
   const coordinateFormat = usePreference('coordinateFormat');
 
   const formatValue = () => {
+	try {
     switch (key) {
       case 'fixTime':
       case 'deviceTime':
@@ -65,7 +74,7 @@ const PositionValue = ({ position, property, attribute }) => {
       //case 'wheelBasedSpeed': //швидкість тз на основі коліс
         return value != null ? formatSpeed(value, speedUnit, t) : '';
       case 'obdSpeed':
-      case 'tahoSpeed':
+      //case 'tahoSpeed': //перевірити
         return value != null ? formatSpeed(speedToKnots(value, 'kmh'), speedUnit, t) : '';
       case 'course':
         return formatCourse(value);
@@ -78,14 +87,13 @@ const PositionValue = ({ position, property, attribute }) => {
       case 'fuelLevel': //рівень топлива
       case 'accelerationPedalPosition': //педаль акслератора
       case 'adBL': //рівень адблю
+	  case 'engineLoad':
         return value != null ? formatPercentage(value) : '';
       case 'llcFuelTotal':
         return formatLlcFuelTotal(
         position.attributes.llc1FuelLevel,
         position.attributes.llc2FuelLevel,
-        volumeUnit,
-        t
-      );
+        volumeUnit, t);
       case 'volume':
       case 'fuelUsed': //топливо використане
         return value != null ? formatVolume(value, volumeUnit, t) : '';
@@ -93,6 +101,9 @@ const PositionValue = ({ position, property, attribute }) => {
         return value != null ? formatConsumption(value, t) : '';
       case 'coolantTemp':
       case 'ambientTemp':
+      case 'engineCT':
+	  case 'lls1Temp':
+	  case 'lls2Temp':
         return value != null ? formatTemperature(value) : '';
       case 'alarm':
         return formatAlarm(value, t);
@@ -118,16 +129,11 @@ const PositionValue = ({ position, property, attribute }) => {
         return formatLlc2Fuel(value, volumeUnit, t);
       case 'grossCombVWeight': //вага тз
         return formatWeight(value, t);
-      case 'd1Name':
-      case 'd1SName':
-      case 'd2Name':
-      case 'd2SName':
-        return formatAsciiHex(value);
 	  case 'driverUniqueId':
 	  case 'driverUniqueId2':
       case 'vin':
       case 'vehicleRnp':
-		return formatBinaryAscii(value);
+        return formatAsciiHex(value);
 	  case 'd1CDT':
   	  case 'd2CDT':
   	  case 'd1CBT':
@@ -152,11 +158,28 @@ const PositionValue = ({ position, property, attribute }) => {
 	  case 'd1RTCBR':
 	  case 'd1TLNDP':
 	  case 'd1DoNDP':
+	  case 'driversHoursPrewarnDelay':
 	    return formatTachoMinutes(value);
       case 'd1Ainfo':
         return formatIo10538(value, t);
 	  case 'adBLstat':
 	    return formatAdBLstat(value, t);
+	  case 'tachoPerformance':
+		return formatTachoPerformance(value, t);
+	  case 'diagnosticsSupported':
+		return formatDiagnosticsSupported(value, t);
+	  case 'cruiseControl':
+		return formatCruiseControl(value, t);
+	  case 'sleepMode':
+		return formatSleepMode(value, t);
+	  case 'gnssStatus':
+		return formatGnssStatus(value, t);
+	  case 'dataMode':
+		return formatDataMode(value, t);
+
+
+
+
 
       default:
         if (typeof value === 'number') {
@@ -166,6 +189,10 @@ const PositionValue = ({ position, property, attribute }) => {
         }
         return value || '';
     }
+	} catch (e) {
+		console.error('PositionValue error', key, value, e);
+		return '';
+	}
   };
 
   if (key === 'address') {

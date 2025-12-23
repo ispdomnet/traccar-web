@@ -52,26 +52,6 @@ export const hexFixedAscii = (hex) => {
   return out.trim();
 };
 
-export const binaryStringToAscii = (value) => {
-  if (!value) return '';
-
-  if (typeof value === 'string') {
-    let out = '';
-    for (let i = 0; i < value.length; i++) {
-      const code = value.charCodeAt(i);
-      if (code === 0) break;
-      if (code >= 32 && code <= 126) {
-        out += String.fromCharCode(code);
-      }
-    }
-    return out.trim();
-  }
-
-  return String(value);
-};
-
-
-
 
 export const speedUnitString = (unit, t) => {
   switch (unit) {

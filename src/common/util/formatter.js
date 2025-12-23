@@ -15,7 +15,6 @@ import {
   convertLlc1Fuel,
   convertLlc2Fuel,
   hexFixedAscii,
-  binaryStringToAscii,
 } from './converter';
 import { prefixString } from './stringUtils';
 
@@ -156,13 +155,124 @@ export const formatLlcFuelTotal = (raw1, raw2, volumeUnit, t) => {
   return formatVolume(total, volumeUnit, t);
 };
 export const formatAsciiHex = (value) => hexFixedAscii(value);
-export const formatBinaryAscii = (value) => binaryStringToAscii(value);
 
 export const formatNumericHours = (value, t) => {
   const hours = Math.floor(value / 3600000);
   const minutes = Math.floor((value % 3600000) / 60000);
   return `${hours} ${t('sharedHourAbbreviation')} ${minutes} ${t('sharedMinuteAbbreviation')}`;
 };
+
+export const formatTachoPerformance = (value, t) => {
+  switch (value) {
+    case 0: return t('tachoPerformanceNormal');
+    case 1: return t('tachoPerformanceAnalysis');
+    case 2: return t('tachoPerformanceError');
+    case 3: return t('tachoPerformanceNotAvailable');
+    default:
+      return '';
+  }
+};
+export const formatDiagnosticsSupported = (value, t) => {
+  switch (value) {
+    case 0: return t('diagnosticsNotSupported');
+    case 1: return t('diagnosticsSupported');
+    case 2: return t('diagnosticsReserved');
+    case 3: return t('diagnosticsDoNotCare');
+    default:
+      return '';
+  }
+};
+export function formatCruiseControl(value, t) {
+  switch (value) {
+    case 0: return t('cruiseControlOff');
+    case 1: return t('cruiseControlOn');
+    default: return '';
+  }
+}
+
+export const formatSleepMode = (value, t) => {
+  switch (value) {
+    case 0: return t('noSleep');
+    case 1: return t('deepSleep');
+    case 2: return t('GPSSleep');
+    case 3: return t('onlineDeepSleep');
+    default: return '';
+  }
+};
+export function formatDriverWorkState(value, t) {
+  switch (value) {
+    case 0: return t('driverWorkRest');
+    case 1: return t('driverWorkAvailable');
+    case 2: return t('driverWorkWork');
+    case 3: return t('driverWorkDrive');
+    case 6: return t('driverWorkError');
+    case 7: return t('driverWorkNotAvailable');
+    default: return '';
+  }
+}
+export function formatDriverCardPresence(value, t) {
+  switch (value) {
+    case 0: return t('driverCardNotPresent');
+    case 1: return t('driverCardPresent');
+    case 2: return t('driverCardError');
+    case 3: return t('driverCardNotAvailable');
+    default: return '';
+  }
+}
+export function formatDriverTimeState(value, t) {
+  switch (value) {
+    case 0: return t('driverTimeNormal');
+    case 1: return t('driverTime15Before45');
+    case 2: return t('driverTime45Reached');
+    case 3: return t('driverTime15Before9');
+    case 4: return t('driverTime9Reached');
+    case 5: return t('driverTime15Before16');
+    case 6: return t('driverTime16Reached');
+    case 7: return t('driverTimeWeeklyPrewarn');
+    case 8: return t('driverTimeWeeklyWarn');
+    case 9: return t('driverTime2WeeksPrewarn');
+    case 10: return t('driverTime2WeeksWarn');
+    case 11: return t('driverTimeCardExpiry');
+    case 12: return t('driverTimeNextDownload');
+    case 13: return t('driverTimeOther');
+    case 14: return t('driverTimeError');
+    case 15: return t('driverTimeNotAvailable');
+    default: return '';
+  }
+}
+export function formatDataMode(value, t) {
+  switch (value) {
+    case 0: return t('dataModeHomeStop');
+    case 1: return t('dataModeHomeMove');
+    case 2: return t('dataModeRoamingStop');
+    case 3: return t('dataModeRoamingMove');
+    case 4: return t('dataModeUnknownStop');
+    case 5: return t('dataModeUnknownMove');
+    default: return '';
+  }
+}
+export function formatTachoDataSource(value, t) {
+  switch (value) {
+    case 0: return t('tachoSourceUnknown');
+    case 1: return t('tachoSourceKline');
+    case 2: return t('tachoSourceAllCan');
+    case 3: return t('tachoSourceTachoCan');
+    case 4: return t('tachoSourceFms');
+    default: return '';
+  }
+}
+export function formatGnssStatus(value, t) {
+  switch (value) {
+    case 0: return t('gnssOff');
+    case 1: return t('gnssOnNoAntenna');
+    case 2: return t('gnssOnNoFix');
+    case 3: return t('gnssOnWithFix');
+    case 4: return t('gnssSleep');
+    case 5: return t('gnssOvercurrent');
+    default: return '';
+  }
+}
+
 
 export const formatCoordinate = (key, value, unit) => {
   let hemisphere;

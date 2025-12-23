@@ -364,6 +364,10 @@ export default (t) => useMemo(() => ({
     name: t('sharedDriver'),
     type: 'string',
   },
+  driverUniqueId2: {
+    name: t('sharedDriver2'),
+    type: 'string',
+  },
   card: {
     name: t('positionCard'),
     type: 'string',
@@ -391,6 +395,57 @@ export default (t) => useMemo(() => ({
   },
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  dataMode: {
+    name: t('ctDataMode'),
+    type: 'string',
+  },
+  gnssStatus: {
+    name: t('ctGnssStatus'),
+    type: 'string',
+  },
+  sleepMode: {
+    name: t('ctSleepMode'),
+    type: 'string',
+  },
+  cruiseControl: {
+    name: t('ctCruiseControl'),
+    type: 'string',
+  },
+  diagnosticsSupported: {
+    name: t('ctDiagnosticsSupported'),
+    type: 'string',
+  },
+  engineLoad: {
+    name: t('ctEngineLoad'),
+    type: 'string',
+  },
+  lls1Temp: {
+    name: t('ctLls1Temp'),
+    type: 'string',
+  },
+  lls2Temp: {
+    name: t('ctLls2Temp'),
+    type: 'string',
+  },
+  tachoPerformance: {
+    name: t('ctTachoPerformance'),
+    type: 'string',
+  },
+  engineCT: {
+    name: t('ctEngineCT'),
+    type: 'string',
+  },
   d1Ainfo: {
     name: t('ctD1Ainfo'),
     type: 'string',
