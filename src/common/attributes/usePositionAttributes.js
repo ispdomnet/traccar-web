@@ -393,25 +393,69 @@ export default (t) => useMemo(() => ({
     name: t('positionAudio'),
     type: 'string',
   },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  dataMode: {
-    name: t('ctDataMode'),
+
+  driveRecognize: {
+    name: t('ctDriveRecognize'),
+    type: 'string',
+ },
+  tachoOverSpeed: {
+    name: t('ctTachoOverSpeed'),
+    type: 'string',
+ },
+  driver1WorkState: {
+    name: t('ctDriver1WorkState'),
     type: 'string',
   },
-  gnssStatus: {
-    name: t('ctGnssStatus'),
+  driver2WorkState: {
+    name: t('ctDriver2WorkState'),
+    type: 'string',
+  },
+  driver1CardPresence: {
+    name: t('ctDriver1CardPresence'),
+    type: 'string',
+  },
+  driver2CardPresence: {
+    name: t('ctDriver2CardPresence'),
+    type: 'string',
+  },
+  driver1TimeState: {
+    name: t('ctDriver1TimeState'),
+    type: 'string',
+  },
+  driver2TimeState: {
+    name: t('ctDriver2TimeState'),
+    type: 'string',
+  },
+  card1Issuer: {
+    name: t('ctCard1Issuer'),
+    type: 'string',
+  },
+  driversHoursPrewarnDelay: {
+    name: t('ctDriversHoursPrewarnDelay'),
+    type: 'string',
+  },
+  outOfScope: {
+    name: t('ctOutOfScope'),
+    type: 'string',
+  },
+  driver1Over9hCount: {
+    name: t('ctDriver1Over9hCount'),
+    type: 'number',
+  },
+  klinePrivacy: {
+    name: t('ctKlinePrivacy'),
+    type: 'string',
+  },
+  tachoDataSource: {
+    name: t('ctTachoDataSource'),
+    type: 'string',
+  },
+  gsmSignal: {
+    name: t('ctGsmSignal'),
+    type: 'string',
+  },
+  dataMode: {
+    name: t('ctDataMode'),
     type: 'string',
   },
   sleepMode: {

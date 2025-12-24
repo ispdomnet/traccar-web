@@ -34,6 +34,10 @@ import {
   formatDriverTimeState,
   formatDataMode,
   formatTachoDataSource,
+  formatOutOfScope,
+  formatKlinePrivacy,
+  formatTachoOverSpeed,
+  formatDriveRecognize,
 } from '../util/formatter';
 import { speedToKnots } from '../util/converter';
 import { useAttributePreference, usePreference } from '../util/preferences';
@@ -172,14 +176,31 @@ const PositionValue = ({ position, property, attribute }) => {
 		return formatCruiseControl(value, t);
 	  case 'sleepMode':
 		return formatSleepMode(value, t);
-	  case 'gnssStatus':
-		return formatGnssStatus(value, t);
 	  case 'dataMode':
 		return formatDataMode(value, t);
-
-
-
-
+	  case 'gsmSignal':
+		return value != null ? `${value}/5` : '';
+	  case 'tachoDataSource':
+		return formatTachoDataSource(value, t);
+	  case 'klinePrivacy':
+		return formatKlinePrivacy(value, t);
+	  case 'outOfScope':
+		return formatOutOfScope(value, t);
+	  case 'card1Issuer':
+		return value != null ? String(value) : '';
+	  case 'driver1TimeState':
+	  case 'driver2TimeState':
+		return formatDriverTimeState(value, t);
+	  case 'driver1CardPresence':
+	  case 'driver2CardPresence':
+		return formatDriverCardPresence(value, t);
+	  case 'driver1WorkState':
+	  case 'driver2WorkState':
+		return formatDriverWorkState(value, t);
+	  case 'tachoOverSpeed':
+		return formatTachoOverSpeed(value, t);
+	  case 'driveRecognize':
+		return formatDriveRecognize(value, t);
 
       default:
         if (typeof value === 'number') {

@@ -237,7 +237,28 @@ export function formatDriverTimeState(value, t) {
     case 13: return t('driverTimeOther');
     case 14: return t('driverTimeError');
     case 15: return t('driverTimeNotAvailable');
-    default: return '';
+    default:
+      return '';
+  }
+}
+export function formatDriveRecognize(value, t) {
+  switch (value) {
+    case 0: return t('driveRecognizeNo');
+    case 1: return t('driveRecognizeYes');
+    case 2: return t('driveRecognizeError');
+    case 3: return t('driveRecognizeNotAvailable');
+    default:
+      return '';
+  }
+}
+export function formatTachoOverSpeed(value, t) {
+  switch (value) {
+    case 0: return t('tachoOverSpeedNormal');
+    case 1: return t('tachoOverSpeedWarning');
+    case 2: return t('tachoOverSpeedEvent');
+    case 3: return t('tachoOverSpeedNotAvailable');
+    default:
+      return '';
   }
 }
 export function formatDataMode(value, t) {
@@ -261,14 +282,18 @@ export function formatTachoDataSource(value, t) {
     default: return '';
   }
 }
-export function formatGnssStatus(value, t) {
+export function formatKlinePrivacy(value, t) {
   switch (value) {
-    case 0: return t('gnssOff');
-    case 1: return t('gnssOnNoAntenna');
-    case 2: return t('gnssOnNoFix');
-    case 3: return t('gnssOnWithFix');
-    case 4: return t('gnssSleep');
-    case 5: return t('gnssOvercurrent');
+    case 0: return t('klinePrivacyDisabled');
+    case 1: return t('klinePrivacyEnabled');
+    case 2: return t('klinePrivacyNoData');
+    default: return '';
+  }
+}
+export function formatOutOfScope(value, t) {
+  switch (value) {
+    case 0: return t('outOfScopeClosed');
+    case 1: return t('outOfScopeOpened');
     default: return '';
   }
 }
