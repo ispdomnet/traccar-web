@@ -111,11 +111,9 @@ const PositionValue = ({ position, property, attribute }) => {
         return value != null ? formatTemperature(value) : '';
       case 'alarm':
         return formatAlarm(value, t);
-      case 'serviceOdometer': //відстань до сервісу
-        return value != null ? formatDistance(value, 'km', t) : '';
-      //case 'odometer': //перевірити
-      //case 'tripOdometer': //перевірити
-      case 'obdOdometer':
+      case 'odometer':
+      case 'tripDistance':
+		return value != null ? `${(value / 1000).toFixed(1)} km` : '';
       case 'distance':
       case 'totalDistance':
         return value != null ? formatDistance(value, distanceUnit, t) : '';
@@ -201,6 +199,8 @@ const PositionValue = ({ position, property, attribute }) => {
 		return formatTachoOverSpeed(value, t);
 	  case 'driveRecognize':
 		return formatDriveRecognize(value, t);
+
+
 
       default:
         if (typeof value === 'number') {

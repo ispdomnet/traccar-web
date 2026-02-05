@@ -394,14 +394,22 @@ export default (t) => useMemo(() => ({
     type: 'string',
   },
 
+  tripDistance: {
+    name: t('ctTripDistance'),
+    type: 'string',
+  },
+  odometer: {
+    name: t('ctOdometer'),
+    type: 'string',
+  },
   driveRecognize: {
     name: t('ctDriveRecognize'),
     type: 'string',
- },
+  },
   tachoOverSpeed: {
     name: t('ctTachoOverSpeed'),
     type: 'string',
- },
+  },
   driver1WorkState: {
     name: t('ctDriver1WorkState'),
     type: 'string',
@@ -632,10 +640,6 @@ export default (t) => useMemo(() => ({
   },
   d1EndFSlWp: {
     name: t('ctD1EndFSlWp'),
-    type: 'string',
-  },
-  operatorName: {
-    name: t('ctOperatorName'),
     type: 'string',
   },
   totalOdometer_io: {

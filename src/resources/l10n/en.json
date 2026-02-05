@@ -629,6 +629,8 @@
     "maintenanceStart": "Start",
     "maintenancePeriod": "Period",
 	
+	"ctTripDistance": "Trip Distance",
+	"ctOdometer": "Odometer",
 	"ctDriveRecognize": "Drive recognize",
 	"driveRecognizeNo": "Not recognized",
 	"driveRecognizeYes": "Recognized",
@@ -769,8 +771,7 @@
     "ctNextCalD": "Next Calibration Date",
     "ctD1EndLDrr": "Driver 1 end of last daily rest report",
     "ctD1EndLWrp": "Driver 1 end of last weekly rest period",
-    "ctD1EndFSlWp": "Driver 1 end of second last weekly rest period",	
-    "ctOperatorName": "Operator name",
+    "ctD1EndFSlWp": "Driver 1 end of second last weekly rest period",
     "ctWheelBasedSpeed": "Wheel Based Speed",
     "ctFuelLevel": "Fuel Level",
     "ctAccelerationPedalPosition": "Acceleration Pedal Position",
