@@ -627,6 +627,8 @@
     "maintenanceStart": "Початок",
     "maintenancePeriod": "Період",
 
+	"ctUltrasonicFuelLevel1": "Ультразвуковий рівень пального 1",
+	"ctUltrasonicFuelLevel2": "Ультразвуковий рівень пального 2",
 	"ctTripDistance": "Пробіг поїздки",
 	"ctOdometer": "Пробіг",
 	"ctDriveRecognize": "Розпізнавання руху",

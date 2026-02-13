@@ -199,6 +199,10 @@ const PositionValue = ({ position, property, attribute }) => {
 		return formatTachoOverSpeed(value, t);
 	  case 'driveRecognize':
 		return formatDriveRecognize(value, t);
+	  case 'ultrasonicFuelLevel1':
+	  case 'ultrasonicFuelLevel2':
+        return value != null ? `${value.toFixed(1)} mm` : '';
+
 
 
 

@@ -394,6 +394,15 @@ export default (t) => useMemo(() => ({
     type: 'string',
   },
 
+
+  ultrasonicFuelLevel1: {
+    name: t('ctUltrasonicFuelLevel1'),
+    type: 'string',
+  },
+  ultrasonicFuelLevel2: {
+    name: t('ctUltrasonicFuelLevel2'),
+    type: 'string',
+  },
   tripDistance: {
     name: t('ctTripDistance'),
     type: 'string',

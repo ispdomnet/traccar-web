@@ -629,6 +629,8 @@
     "maintenanceStart": "Start",
     "maintenancePeriod": "Period",
 	
+	"ctUltrasonicFuelLevel1": "Ultrasonic fuel level 1",
+	"ctUltrasonicFuelLevel2": "Ultrasonic fuel level 2",
 	"ctTripDistance": "Trip Distance",
 	"ctOdometer": "Odometer",
 	"ctDriveRecognize": "Drive recognize",
